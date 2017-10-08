@@ -26,6 +26,7 @@
                     if (data.results[0].name == vm.form.username && data.results[0].birth_year == vm.form.password) {
                         $cookies.put ('isLoggedin', true);
                         $cookies.put ('name', data.results[0].name);
+                        $rootScope.name = $cookies.get ('name');
                         settingFactory.saveLimit({'count':0, 'timestamp':(new Date()).getTime()});
                         $rootScope.isLoggedin = true;
                         $state.go ('search');
