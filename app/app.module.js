@@ -30,7 +30,7 @@
             });
         })
         .controller('BodyController', function ($rootScope, $cookies, $scope, $state){
-            angular.element (document.getElementsByClassName('navbar-header')).css ('display', 'block');
+            angular.element (document.getElementsByClassName('header-nav')).css ('display', 'block');
             $rootScope.isLoggedin = $cookies.get ('isLoggedin');
             $rootScope.name = $cookies.get ('name');
             $scope.logout = function () {
