@@ -54,7 +54,9 @@
                 <a class="navbar-brand" href="#">Starwars</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse" ng-if="isLoggedin">
+                
                 <form class="navbar-form navbar-right">
+                        <span style="color: white;margin-right: 20px;">Welcome {{name}}</span>
                     <button type="submit" class="btn btn-warning" ng-click="logout()">Sign Out</button>
                 </form>
             </div>

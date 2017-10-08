@@ -3,8 +3,8 @@
 	.constant("SETTING", (function() {
 		return {
             "LIMIT_PER_MIN": {
-                "Luke Skywalker":2,
-                "C-3PO":20
+                "Luke Skywalker":-1,
+                "C-3PO":5
             },
             "DEFAULT_LIMIT":15
 		};

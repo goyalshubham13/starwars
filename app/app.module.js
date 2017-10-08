@@ -30,7 +30,7 @@
         })
         .controller('BodyController', function ($rootScope, $cookies, $scope, $state){
             $rootScope.isLoggedin = $cookies.get ('isLoggedin');
-
+            $rootScope.name = $cookies.get ('name');
             $scope.logout = function () {
                 $cookies.remove ('isLoggedin');
                 $cookies.remove ('name');
