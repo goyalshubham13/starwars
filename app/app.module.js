@@ -16,8 +16,6 @@
         })
         .run(function ($rootScope, $cookies, $state) {
             angular.element (document.getElementsByClassName('progress')).css ('display', 'block');
-            angular.element (document.getElementsByClassName('navbar-header')).css ('display', 'block');
-            angular.element (document.getElementsByClassName('progress')).css ('display', 'block');
 
             $rootScope.loading = false;
             $rootScope.isLoggedin = false;
@@ -32,6 +30,7 @@
             });
         })
         .controller('BodyController', function ($rootScope, $cookies, $scope, $state){
+            angular.element (document.getElementsByClassName('navbar-header')).css ('display', 'block');
             $rootScope.isLoggedin = $cookies.get ('isLoggedin');
             $rootScope.name = $cookies.get ('name');
             $scope.logout = function () {
