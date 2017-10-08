@@ -30,8 +30,11 @@
                 </div>
             </div>
         </div>
-        <div class="panel panel-default search-result" ng-if="search.result.length == 0">
+        <div class="panel panel-default search-result" ng-if="search.result.length == 0 && !search.limitError">
             <div class="panel-body">No planet found</div>
+        </div>
+        <div class="panel panel-danger search-result" ng-if="search.limitError">
+            <div class="panel-body">Limit has been exhausted.</div>
         </div>
     </div>
 </div>

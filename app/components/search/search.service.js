@@ -3,7 +3,7 @@
 		.service("searchService", SearchService);
 	SearchService.$inject = ['Http', 'URL', '$q', '$rootScope'];
 
-	function SearchService(Http, URL, $q, $rootScope) {
+	function SearchService(Http, URL, $q, $rootScope, settingFactory, $cookies) {
 		this.search = search;
 		var canceller = $q.defer();
 

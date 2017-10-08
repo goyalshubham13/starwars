@@ -5,6 +5,7 @@
             'ngCookies',
             'ngMessages',
             'com.starwars.app.constants',
+            'com.starwars.app.config',
             'com.starwars.app.http',
             'com.starwars.app.filters',
             'com.starwars.app.login',

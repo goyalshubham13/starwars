@@ -1,9 +1,9 @@
 (function () {
     angular.module('com.starwars.app.login')
         .controller('Login', LoginController);
-    LoginController.$inject = ['loginService', '$cookies', '$state', '$scope', '$rootScope'];
+    LoginController.$inject = ['loginService', '$cookies', '$state', '$scope', '$rootScope', 'settingFactory'];
 
-    function LoginController(loginService, $cookies, $state, $scope, $rootScope) {
+    function LoginController(loginService, $cookies, $state, $scope, $rootScope, settingFactory) {
         var vm = this;
         vm.form = {};
 
@@ -26,6 +26,7 @@
                     if (data.results[0].name == vm.form.username && data.results[0].birth_year == vm.form.password) {
                         $cookies.put ('isLoggedin', true);
                         $cookies.put ('name', data.results[0].name);
+                        settingFactory.saveLimit({'count':0, 'timestamp':(new Date()).getTime()});
                         $rootScope.isLoggedin = true;
                         $state.go ('search');
                     } else {
