@@ -17,7 +17,7 @@
         .run(function ($rootScope, $cookies, $state) {
             angular.element (document.getElementsByClassName('progress')).css ('display', 'block');
             $rootScope.loading = false;
-
+            $rootScope.isLoggedin = false;
             $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
                 if (toState.name == 'login' && $rootScope.isLoggedin) {
                     event.preventDefault ();
