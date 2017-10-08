@@ -1,0 +1,13 @@
+{
+    "name": "Starwars",
+    "description": "starwars: From all SEVEN Star Wars films",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "angular": "~1.6.6",
+        "angular-cookies": "*",
+        "angular-ui-router": "*",
+        "angular-messages": "*",
+        "jquery": "*"
+    }
+}

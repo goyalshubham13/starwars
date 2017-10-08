@@ -1,0 +1,19 @@
+<div class="container">
+    <form class="form-signin" name="loginform">
+        <div class="logo"></div>
+        <div class="alert alert-danger" ng-show="login.message" role="alert">{{login.message}}</div>
+        <label for="inputEmail" class="sr-only">Username</label>
+        <input type="text" id="username" name="username" class="form-control" placeholder="Username" required ng-model="login.form.username">
+        <div ng-messages="loginform.username.$error" role="alert" ng-show="loginform.username.$error && loginform.username.$touched">
+            <div ng-message="required" class="text-danger">Please enter a value for this field.</div>
+        </div>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="password" name="password" class="form-control" placeholder="Password" required ng-model="login.form.password">
+        <div  ng-messages="loginform.password.$error" role="alert" ng-show="loginform.password.$error && loginform.password.$touched">
+                <div ng-message="required" class="text-danger">Please enter a value for this field.</div>
+            </div>
+        <button class="btn btn-lg btn-primary btn-block" type="button" ng-click="login.doLogin(loginform)">Sign in</button>
+    </form>
+
+</div>
+<!-- /container -->

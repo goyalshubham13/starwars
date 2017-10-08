@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row search-form">
+        <div class="col-xs-10">
+            <input type="text" ng-keyup="search.search()" class="form-control" placeholder="Search planet here" ng-model="search.queryText"
+            />
+        </div>
+        <div class="col-xs-2">
+            <button class="btn btn-lg btn-primary" type="button" ng-click="search.search()">Search</button>
+        </div>
+    </div>
+    <div class="container search-result-container">
+        <div class="panel panel-default search-result" ng-style="search.getStyle(28-(2*$index))" ng-repeat="item in search.result | orderBy:'population':true:search.populationComparator">
+            <div class="panel-heading">{{item.name}}</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-3"><b>Terrain</b></div>
+                    <div class="col-md-9">{{item.terrain | capitalize}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"><b>Population</b></div>
+                    <div class="col-md-9">{{item.population}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"><b>Climate</b></div>
+                    <div class="col-md-9">{{item.climate | capitalize}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3"><b>Font Size</b></div>
+                    <div class="col-md-9">{{search.getStyle(28-(2*$index)).fontSize}}</div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default search-result" ng-if="search.result.length == 0">
+            <div class="panel-body">No planet found</div>
+        </div>
+    </div>
+</div>
