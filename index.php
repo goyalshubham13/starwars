@@ -55,7 +55,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse header-nav" ng-if="isLoggedin" style="display:none;">
 
-                <form class="navbar-form navbar-right">
+                <form class="navbar-form navbar-right header-nav" style="display:none;">
                     <span style="color: white;margin-right: 20px;">Welcome {{name}}</span>
                     <button type="submit" class="btn btn-warning" ng-click="logout()">Sign Out</button>
                 </form>
