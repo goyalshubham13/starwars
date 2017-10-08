@@ -16,6 +16,9 @@
         })
         .run(function ($rootScope, $cookies, $state) {
             angular.element (document.getElementsByClassName('progress')).css ('display', 'block');
+            angular.element (document.getElementsByClassName('navbar-header')).css ('display', 'block');
+            angular.element (document.getElementsByClassName('progress')).css ('display', 'block');
+
             $rootScope.loading = false;
             $rootScope.isLoggedin = false;
             $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
