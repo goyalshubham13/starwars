@@ -43,7 +43,7 @@
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header header-nav" style="display:none;">
+            <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
                     aria-controls="navbar" ng-if="isLoggedin">
             <span class="sr-only">Toggle navigation</span>
@@ -53,7 +53,7 @@
           </button>
                 <a class="navbar-brand" href="#">Starwars</a>
             </div>
-            <div id="navbar" class="navbar-collapse collapse header-nav" ng-if="isLoggedin" style="display:none;">
+            <div id="navbar" class="navbar-collapse collapse header-nav" ng-if="isLoggedin">
 
                 <form class="navbar-form navbar-right header-nav" style="display:none;">
                     <span style="color: white;margin-right: 20px;">Welcome {{name}}</span>
